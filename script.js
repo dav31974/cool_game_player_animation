@@ -61,6 +61,8 @@ const animationStates = [
         frames: 4,
     }
 ];
+
+// boucle sur le tableau animationstates et push sur le tableau spriteanimations afin d'obtenir un tableau de coordonées x et y pour chaque animations
 animationStates.forEach((state, index) => {
     let frames = {
         loc: [],
@@ -72,7 +74,7 @@ animationStates.forEach((state, index) => {
     }
     spriteAnimations[state.name] = frames;
 });
-console.log(spriteAnimations);
+// console.log(spriteAnimations);
 
 function animate() {
     ctx.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
