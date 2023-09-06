@@ -4,6 +4,7 @@ dropdown.addEventListener('change', function (e) {
     playerState = e.target.value;
 });
 
+// innitialisation du canvas
 const canvas = document.getElementById('canvas1');
 const ctx = canvas.getContext('2d');
 
@@ -82,7 +83,7 @@ function animate() {
     let frameX = spriteWidth * position;
     let frameY = spriteAnimations[playerState].loc[position].y;
 
-    // ctx.drawImage(playerImage, sourcex, sourcey, sw, sh, destinationx, destinationy, dw, dh); 
+    // ctx.drawImage(playerImage, sourcex, sourcey, sw, sh, destinationx, destinationy, dw, dh); fonction propre au context de canvas 
     ctx.drawImage(playerImage, frameX, frameY, spriteWidth, spriteHeight, 0, 0, spriteWidth, spriteHeight);
 
     gameFrame++;
